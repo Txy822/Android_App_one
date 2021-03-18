@@ -3,4 +3,11 @@
     <string name="hello_world" translatable="false">TextView</string>
     <string name="Radio_button" translatable="false">RadioButton</string>
     <string name="My_button" translatable="false">Button</string>
+    <string-array name="spinneroptions">
+       <item> Hello one</item>
+        <item> Hello two</item>
+        <item> Hello three</item>
+        <item> Hello four</item>
+
+    </string-array>
 </resources>
