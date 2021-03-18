@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         currentgreeting.setText(greetings.getSelectedItem().toString());
     }
     public void onSendMessage(View view){
-        Intent intent = new Intent(this, ReceiveMessageActivityOne.class);
-        EditText message = (EditText) findViewById(R.id.message);
-        intent.putExtra(ReceiveMessageActivityOne.INTENT_MESSAGE, message.getText().toString());
+        Intent intent = new Intent(this, CreateMessageActivityOne.class);
+        //EditText message = (EditText) findViewById(R.id.message);
+        //intent.putExtra(ReceiveMessageActivityOne.INTENT_MESSAGE, message.getText().toString());
         startActivity(intent);
     }
 

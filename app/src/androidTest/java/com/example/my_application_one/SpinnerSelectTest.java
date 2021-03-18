@@ -30,7 +30,8 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class SpinnerSelectTest {
-
+    //final String TEST_MESSAGE = "Yeah, here is a test message.";
+    final String TEST_MESSAGE = "Yeah";
     @Rule
     public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule <>(MainActivity.class);
 
@@ -68,4 +69,26 @@ public class SpinnerSelectTest {
         onView(withId(R.id.textView)).check(matches(withText(firstItem)));
 
     }
+//    @Rule
+//    public ActivityScenarioRule<CreateMessageActivity> mActivityTestRule = new ActivityScenarioRule<>(CreateMessageActivity.class);
+
+    @Test
+    public void checkCreateAppearance() {
+        onView(withId(R.id.send)).check(matches(isDisplayed()));
+        onView(withId(R.id.send)).perform(click());
+        onView(withId(R.id.message)).check(matches(isDisplayed()));
+        onView(withId(R.id.send)).check(isCompletelyAbove(withId(R.id.message)));
+    }
+
+    @Test
+    public void checkFillAndSend() {
+        //onView(withId(R.id.message)).perform(typeText(TEST_MESSAGE));
+        onView(withId(R.id.send)).perform(click());
+        onView(withId(R.id.send)).check(matches(isDisplayed()));
+        onView(withId(R.id.message)).perform(typeText(TEST_MESSAGE));
+        onView(withId(R.id.send)).perform(click());
+        onView(withId(R.id.messageReceived)).check(matches(isDisplayed()));
+        onView(withId(R.id.messageReceived)).check(matches(withText(TEST_MESSAGE)));
+    }
+
 }
