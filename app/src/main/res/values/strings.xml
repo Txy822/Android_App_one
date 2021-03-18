@@ -1,13 +1,12 @@
 <resources>
-    <string name="app_name" translatable="false">MyApplication</string>
-    <string name="hello_world" translatable="false">TextView</string>
-    <string name="Radio_button" translatable="false">RadioButton</string>
-    <string name="My_button" translatable="false">Button</string>
+    <string name="app_name">MyApp</string>
+    <string name="Hello_World" translatable="false">Here is may new hello</string>
+    <string name="button" translatable="false">Update</string>
     <string-array name="spinneroptions">
-       <item> Hello one</item>
-        <item> Hello two</item>
-        <item> Hello three</item>
-        <item> Hello four</item>
-
+        <item>Hello to the world!</item>
+        <item>Everyone around the world Hello!</item>
+        <item>There are many ways to say Hello!</item>
     </string-array>
+
+
 </resources>

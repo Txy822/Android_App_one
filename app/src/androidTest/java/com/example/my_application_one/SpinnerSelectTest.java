@@ -2,29 +2,19 @@ package com.example.my_application_one;
 
 import android.content.Context;
 
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
-
-import android.content.Context;
-
-import androidx.test.espresso.ViewInteraction;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static org.junit.Assert.*;
 import static androidx.test.espresso.Espresso.*;
 import static androidx.test.espresso.action.ViewActions.*;
 import static androidx.test.espresso.assertion.PositionAssertions.*;
 import static androidx.test.espresso.assertion.ViewAssertions.*;
-
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.matcher.ViewMatchers.*;
 import static org.hamcrest.Matchers.allOf;
@@ -34,7 +24,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 /**
- * Instrumented test, which will execute on an Android device.
+ * Instrumented test, which will execute on an Android device and to check the android view.
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
@@ -42,23 +32,27 @@ import static org.junit.Assert.*;
 public class SpinnerSelectTest {
 
     @Rule
-    public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
+    public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule <>(MainActivity.class);
 
     @Test
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        //assertEquals("com.example.weekthreeapplicationtwo", appContext.getPackageName());
         assertEquals("com.example.my_application_one", appContext.getPackageName());
     }
 
     @Test
-    public void spinnerExists(){
+    public void spinnerExists() {
+
         onView(withId(R.id.spinner)).check(matches(isDisplayed()));
+
     }
 
     @Test
     public void spinnerAboveButton() {
         onView(withId(R.id.spinner)).check(isCompletelyAbove(withId(R.id.button)));
+
     }
 
     @Test
@@ -72,5 +66,6 @@ public class SpinnerSelectTest {
         onData(allOf(is(instanceOf(String.class)), is(firstItem))).perform(click());
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.textView)).check(matches(withText(firstItem)));
+
     }
 }
