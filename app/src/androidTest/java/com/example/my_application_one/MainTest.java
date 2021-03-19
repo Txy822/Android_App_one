@@ -75,9 +75,6 @@ public class MainTest {
         onView(withId(R.id.textView)).check(matches(withText(firstItem)));
 
     }
-//    @Rule
-//    public ActivityScenarioRule<CreateMessageActivity> mActivityTestRule = new ActivityScenarioRule<>(CreateMessageActivity.class);
-
     @Test
     public void checkCreateAppearance() {
         onView(withId(R.id.send)).check(matches(isDisplayed()));
