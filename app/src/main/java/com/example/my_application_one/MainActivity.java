@@ -24,16 +24,26 @@ public class MainActivity extends AppCompatActivity {
         Spinner greetings = (Spinner) findViewById(R.id.spinner);
         currentgreeting.setText(greetings.getSelectedItem().toString());
     }
-    public void go_messanger(View view){
-        TextView currentgreeting = (TextView) findViewById(R.id.textView);
-        Spinner greetings = (Spinner) findViewById(R.id.spinner);
-        currentgreeting.setText(greetings.getSelectedItem().toString());
+    public void StopClock(View view){
+        Intent intent = new Intent(this, StopClock.class);
+        startActivity(intent);
     }
     public void onSendMessage(View view){
         Intent intent = new Intent(this, CreateMessageActivityOne.class);
         //EditText message = (EditText) findViewById(R.id.message);
         //intent.putExtra(ReceiveMessageActivityOne.INTENT_MESSAGE, message.getText().toString());
         startActivity(intent);
+    }
+    public void timerStart(View view){
+
+    }
+
+    public void timerStop(View view){
+
+    }
+
+    public void timerReset(View view) {
+
     }
 
 

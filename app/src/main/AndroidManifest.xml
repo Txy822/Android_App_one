@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.My_Application_one">
-        <activity android:name=".ReceiveMessageActivityOne"></activity>
+        <activity android:name=".StopClock"></activity>
+        <activity android:name=".ReceiveMessageActivityOne" />
         <activity android:name=".CreateMessageActivityOne" />
         <activity android:name=".MainActivity">
             <intent-filter>
