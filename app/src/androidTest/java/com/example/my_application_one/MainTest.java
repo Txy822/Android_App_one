@@ -17,6 +17,7 @@ import org.junit.runner.RunWith;
 
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.PositionAssertions.isCompletelyAbove;
@@ -50,7 +51,12 @@ public class MainTest {
         //assertEquals("com.example.weekthreeapplicationtwo", appContext.getPackageName());
         assertEquals("com.example.my_application_one", appContext.getPackageName());
     }
-
+    @Test
+    public void menuInteraction(){
+        openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getInstrumentation().getContext());
+        onView(withText("Options")).perform(click());
+        onView(withId(R.id.optionsLabel)).check(matches(isDisplayed()));
+    }
     @Test
     public void spinnerExists() {
 

@@ -11,6 +11,7 @@
     <string name="home" translatable="false">Home</string>
     <string name="settings" translatable="false">Settings</string>
     <string name="about" translatable="false">About</string>
+    <string name="i_am_some_options_label" translatable="false">I am some options label!</string>
 
     <string-array name="spinneroptions">
         <item>Hello to the world!</item>
