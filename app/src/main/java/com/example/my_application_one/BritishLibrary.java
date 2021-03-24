@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 
+
 public class BritishLibrary extends AppCompatActivity {
     private SharedPreferences sharedPref; //In the class definition
 
@@ -19,7 +20,7 @@ public class BritishLibrary extends AppCompatActivity {
 
         sharedPref = this.getPreferences(Context.MODE_PRIVATE); //In the onCreate method
         ((EditText)findViewById(R.id.borrowerID)).setText(sharedPref.getString("borrower _id","No ID set."));
-        sharedPref.contains("borrower_id");
+
     }
     public void setBorrowerIDClick(View view) {
         EditText bID = (EditText) findViewById(R.id.borrowerID);

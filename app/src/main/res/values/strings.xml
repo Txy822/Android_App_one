@@ -7,6 +7,10 @@
     <string name="edit_text_name" translatable="false">Edit Borrower</string>
     <string name="name_TextView" translatable="false">BorrowerID</string>
     <string name="button_name" translatable="false">Set Borrower ID</string>
+    <string name="options" translatable="false">Options</string>
+    <string name="home" translatable="false">Home</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="about" translatable="false">About</string>
 
     <string-array name="spinneroptions">
         <item>Hello to the world!</item>
