@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, StopClock.class);
         startActivity(intent);
     }
+    public void BritishLibrary(View view){
+        Intent intent = new Intent(this, BritishLibrary.class);
+        startActivity(intent);
+    }
     public void onSendMessage(View view){
         Intent intent = new Intent(this, CreateMessageActivityOne.class);
         //EditText message = (EditText) findViewById(R.id.message);
