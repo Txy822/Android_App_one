@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-
-
 public class BritishLibrary extends AppCompatActivity {
     private SharedPreferences sharedPref; //In the class definition
 

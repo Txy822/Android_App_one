@@ -48,7 +48,6 @@ public class MainTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        //assertEquals("com.example.weekthreeapplicationtwo", appContext.getPackageName());
         assertEquals("com.example.my_application_one", appContext.getPackageName());
     }
     @Test
