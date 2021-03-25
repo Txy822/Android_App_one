@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onSendMessage(View view){
         Intent intent = new Intent(this, CreateMessageActivityOne.class);
-        //EditText message = (EditText) findViewById(R.id.message);
-        //intent.putExtra(ReceiveMessageActivityOne.INTENT_MESSAGE, message.getText().toString());
         startActivity(intent);
     }
     public void timerStart(View view){
@@ -60,9 +58,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.options:
-                Intent i = new Intent(MainActivity.this, BritishLibrary.class);
-                startActivity(i);
+            case R.id.britishLibrary:
+                Intent one = new Intent(MainActivity.this, BritishLibrary.class);
+                startActivity(one);
+                return true;
+            case R.id.stopClock:
+                Intent two = new Intent(MainActivity.this, StopClock.class);
+                startActivity(two);
+                return true;
+            case R.id.send:
+                Intent three = new Intent(MainActivity.this, CreateMessageActivityOne.class);
+                startActivity(three);
+                return true;
+            case R.id.home:
+                Intent four = new Intent(MainActivity.this, Home.class);
+                startActivity(four);
+                return true;
+            case R.id.settings:
+                Intent five= new Intent(MainActivity.this, Settings.class);
+                startActivity(five);
+                return true;
+            case R.id.about:
+                Intent six = new Intent(MainActivity.this, About.class);
+                startActivity(six);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

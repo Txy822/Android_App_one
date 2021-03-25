@@ -84,7 +84,7 @@
             android:id="@+id/britishLibrary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BritishLibrary"
+            android:text="@string/BritishLibrary"
             android:onClick="BritishLibrary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

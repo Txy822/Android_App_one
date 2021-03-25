@@ -3,6 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/options"
-        android:title="@string/options" />
+        android:id="@+id/britishLibrary"
+        android:title="@string/BritishLibrary"
+        />
+    <item
+        android:id="@+id/send"
+        android:title="@string/send"
+        />
+    <item
+        android:id="@+id/stopClock"
+        android:title="@string/stopClock"
+        />
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        />
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        />
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        />
 </menu>
