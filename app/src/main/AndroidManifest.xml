@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.My_Application_one">
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".TopLevelActivity"></activity>
+        <activity android:name=".Settings" />
         <activity android:name=".About" />
         <activity android:name=".Home" />
         <activity android:name=".BritishLibrary" />
