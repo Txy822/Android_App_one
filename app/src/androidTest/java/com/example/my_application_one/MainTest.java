@@ -3,18 +3,15 @@ package com.example.my_application_one;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.test.espresso.UiController;
 import androidx.test.espresso.ViewAction;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
-
 import org.hamcrest.Matcher;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
@@ -100,8 +97,6 @@ public class MainTest {
         onView(withId(R.id.messageReceived)).check(matches(isDisplayed()));
         onView(withId(R.id.messageReceived)).check(matches(withText(TEST_MESSAGE)));
     }
-
-
 
     @Test
     public void checkViews(){
