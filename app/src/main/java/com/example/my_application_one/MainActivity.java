@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreateMessageActivityOne.class);
         startActivity(intent);
     }
+    public void Top_level_entry(View view){
+        Intent intent = new Intent(this, TopLevelActivity.class);
+        startActivity(intent);
+    }
     public void timerStart(View view){
 
     }

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MyApp</string>
-    <string name="Hello_World" translatable="false">Here is may new hello</string>
+    <string name="Hello_World">Here is may new hello</string>
     <string name="button" translatable="false">Update</string>
     <string name="send" translatable="false">Send Message</string>
     <string name="message" translatable="false">Your message...</string>
