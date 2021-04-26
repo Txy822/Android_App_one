@@ -22,34 +22,11 @@
         <item>Everyone around the world Hello!</item>
         <item>There are many ways to say Hello!</item>
         <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>There are many ways to say Hello!</item>
-        <item>Everyone around the world Hello!</item>
-        <item>Hello!</item>
-        <item>Hello!</item>
-        <item>Hello!</item>
-
     </string-array>
+
+    <string name="edit_message" translatable="false">Enter a message</string>
+    <string name="button_send" translatable="false">Send</string>
+    <string name="stopclock" translatable="false">StopClock</string>
+    <string name="top_level_entry" translatable="false">Top_level_entry</string>
 
 </resources>
