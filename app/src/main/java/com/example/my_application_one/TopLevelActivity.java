@@ -20,8 +20,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import androidx.test.espresso.IdlingRegistry;
-import androidx.test.espresso.idling.CountingIdlingResource;
+//import androidx.test.espresso.IdlingRegistry;
+//import androidx.test.espresso.idling.CountingIdlingResource;
 
 public class TopLevelActivity extends AppCompatActivity {
     private ArrayList<CafeProduct> products = new ArrayList<CafeProduct>();
@@ -42,20 +42,20 @@ public class TopLevelActivity extends AppCompatActivity {
         listView.setAdapter(productsAdpt);
     }
     public void onRequestProducts(View view) {
-        ApiCountingIdlingResources.increment();
+        //ApiCountingIdlingResources.increment();
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JsonArrayRequest getRequest = new JsonArrayRequest(Request.Method.GET, "https://www.sjjg.uk/coffee-shop/getAllProducts", null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         populateList(response);
-                        ApiCountingIdlingResources.decrement();
+                        //ApiCountingIdlingResources.decrement();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        ApiCountingIdlingResources.decrement();
+                       // ApiCountingIdlingResources.decrement();
                     }
                 }
         );
@@ -72,5 +72,9 @@ public class TopLevelActivity extends AppCompatActivity {
         } catch (JSONException err) {
         }
         productsAdpt.notifyDataSetChanged();
+
+    }
+    public  void populate( View view) {
+
     }
 }
