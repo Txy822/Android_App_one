@@ -11,18 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.My_Application_one">
-        <activity android:name=".DisplayMessageActivity"></activity>
-        <activity android:name=".MainActivity3" />
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".DrinkDetailsActivity" />
-        <activity android:name=".TopLevelActivity" />
-        <activity android:name=".Settings" />
-        <activity android:name=".About" />
-        <activity android:name=".Home" />
-        <activity android:name=".BritishLibrary" />
-        <activity android:name=".StopClock" />
-        <activity android:name=".ReceiveMessageActivityOne" />
-        <activity android:name=".CreateMessageActivityOne" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +19,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:parentActivityName=".MainActivity3" />
+        <activity
+            android:name=".MainActivity3"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StopClock"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".BritishLibrary"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TopLevelActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CreateMessageActivityOne"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ReceiveMessageActivityOne"
+            android:parentActivityName=".CreateMessageActivityOne" />
+        <activity
+            android:name=".DrinkDetailsActivity"
+            android:parentActivityName=".TopLevelActivity" />
+        <activity
+            android:name=".Home"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".About"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity2"
+            android:parentActivityName=".MainActivity" />
+
     </application>
 
 </manifest>

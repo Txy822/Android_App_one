@@ -28,5 +28,6 @@
     <string name="button_send" translatable="false">Send</string>
     <string name="stopclock" translatable="false">StopClock</string>
     <string name="top_level_entry" translatable="false">Top_level_entry</string>
+    <string name="message_display">Messaging Button</string>
 
 </resources>
