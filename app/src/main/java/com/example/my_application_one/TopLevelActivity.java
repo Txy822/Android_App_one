@@ -42,20 +42,20 @@ public class TopLevelActivity extends AppCompatActivity {
         listView.setAdapter(productsAdpt);
     }
     public void onRequestProducts(View view) {
-        //ApiCountingIdlingResources.increment();
+        ApiCountingIdlingResources.increment();
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JsonArrayRequest getRequest = new JsonArrayRequest(Request.Method.GET, "https://www.sjjg.uk/coffee-shop/getAllProducts", null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         populateList(response);
-                        //ApiCountingIdlingResources.decrement();
+                        ApiCountingIdlingResources.decrement();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                       // ApiCountingIdlingResources.decrement();
+                        ApiCountingIdlingResources.decrement();
                     }
                 }
         );

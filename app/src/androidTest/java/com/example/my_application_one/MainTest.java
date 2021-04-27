@@ -3,8 +3,11 @@ package com.example.my_application_one;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.test.espresso.IdlingRegistry;
 import androidx.test.espresso.UiController;
 import androidx.test.espresso.ViewAction;
+import androidx.test.espresso.contrib.RecyclerViewActions;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -145,6 +148,15 @@ public class MainTest {
 
         onView(withId(R.id.timer)).check(matches(withText("00:00:00")));
     }
+    @Test
+    public void getListCheckDetails(){
+        onView(withId(R.id.button2)).perform(click());
+        IdlingRegistry.getInstance().register(ApiCountingIdlingResources.getIdlingResource());
+        onView(withId(R.id.ListButton)).perform(click());
+        onView(withId(R.id.productList)).perform(RecyclerViewActions.actionOnItemAtPosition(0,click()));
+        IdlingRegistry.getInstance().unregister(ApiCountingIdlingResources.getIdlingResource());
+    }
+
 
     // Thanks StackOverflow for this!
     // https://stackoverflow.com/questions/23381459/how-to-get-text-from-textview-using-espresso

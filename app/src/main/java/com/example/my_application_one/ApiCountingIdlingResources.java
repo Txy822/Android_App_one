@@ -1,5 +1,4 @@
 package com.example.my_application_one;
-
 import androidx.test.espresso.IdlingResource;
 import androidx.test.espresso.idling.CountingIdlingResource;
 
